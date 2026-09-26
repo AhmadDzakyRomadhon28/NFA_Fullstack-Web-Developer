@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; 
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    background-color: #76C0EC;
+    height: 380px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+    opacity: 0.85;
+}
+
+.header-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+.header-text h1 {
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.header-text p {
+    color: #76C0EC;
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+.navbar {
+    background-color: #76C0EC;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #ffffff; 
+    transition: all 0.3s ease; 
+}
+
+
+.nav-item:hover, .nav-item.active {
+    background-color: #76C0EC;
+    color: #ffffff;
+}
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+
+.card {
+    background-color: #76C0EC;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #2b6cb0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+
+.left-card {
+    flex: 1;
+}
+
+.main-card {
+    flex: 2;
+}
+
+.right-card {
+    flex: 1;
+}
+
+
+.main-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.sub-title {
+    color: #2b6cb0;
+    margin: 12px 0 8px 0;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.trophy-list li {
+    padding: 4px 0;
+}
+
+
+.footer {
+    background-color: #76C0EC;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 2px solid #ffffff;
+}
