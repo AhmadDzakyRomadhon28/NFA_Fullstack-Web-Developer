@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JavaScript</title>
+</head>
+<body>
+    <h1 align="center">Program Penghitung Luas Bangun Datar</h1>
+    <hr>
+    <p>Buka <strong>Developer Console (F12)</strong> di browser Anda untuk melihat hasil perhitungan JavaScript.</p>
+    
+    <fieldset   >
+    <script>
+        // 1. FUNGSI MENGHITUNG LUAS PERSEGI PANJANG
+        // Rumus: Luas = Panjang x Lebar
+        function hitungLuasPersegiPanjang(panjang, lebar) {
+            // Mengalikan panjang dan lebar menggunakan operator perkalian (*)
+            let luas = panjang * lebar;
+            return luas;
+        }
+
+        // 2. FUNGSI MENGHITUNG LUAS BUJUR SANGKAR (PERSEGI)
+        // Rumus: Luas = Sisi x Sisi
+        function hitungLuasBujurSangkar(sisi) {
+            // Mengalikan sisi dengan sisi menggunakan operator perkalian (*)
+            let luas = sisi * sisi;
+            return luas;
+        }
+
+        // 3. FUNGSI MENGHITUNG LUAS SEGITIGA
+        // Rumus: Luas = 0.5 x Alas x Tinggi
+        function hitungLuasSegitiga(alas, tinggi) {
+            // Mengalikan alas dan tinggi kemudian dibagi 2 (atau dikali 0.5)
+            let luas = 0.5 * alas * tinggi;
+            return luas;
+        }
+
+
+        // EKSEKUSI FUNGSI DAN MENAMPILKAN HASIL
+
+        // --- Contoh Perhitungan Persegi Panjang ---
+        let panjangPP = 10;
+        let lebarPP = 5;
+        let luasPP = hitungLuasPersegiPanjang(panjangPP, lebarPP);
+
+        console.log("=== PERSEGI PANJANG ===");
+        console.log("Panjang : " + panjangPP);
+        console.log("Lebar   : " + lebarPP);
+        console.log("Luas    : " + luasPP);
+        console.log("\n");
+
+        // --- Contoh Perhitungan Bujur Sangkar ---
+        let sisiPersegi = 8;
+        let luasPersegi = hitungLuasBujurSangkar(sisiPersegi);
+
+        console.log("=== BUJUR SANGKAR ===");
+        console.log("Sisi    : " + sisiPersegi);
+        console.log("Luas    : " + luasPersegi);
+        console.log("\n");
+
+        // --- Contoh Perhitungan Segitiga ---
+        let alasSegitiga = 12;
+        let tinggiSegitiga = 6;
+        let luasSegitiga = hitungLuasSegitiga(alasSegitiga, tinggiSegitiga);
+
+        console.log("=== SEGITIGA ===");
+        console.log("Alas    : " + alasSegitiga);
+        console.log("Tinggi  : " + tinggiSegitiga);
+        console.log("Luas    : " + luasSegitiga);
+
+        // Menampilkan ringkasan hasil langsung di halaman web
+        document.write("<h2>Hasil Perhitungan:</h2>");
+        document.write("<p>Luas Persegi Panjang (10 x 5) = <strong>" + luasPP + "</strong></p>");
+        document.write("<p>Luas Bujur Sangkar (8 x 8) = <strong>" + luasPersegi + "</strong></p>");
+        document.write("<p>Luas Segitiga (0.5 x 12 x 6) = <strong>" + luasSegitiga + "</strong></p>");
+    </script>
+    </fieldset>
+</body>
+</html>
