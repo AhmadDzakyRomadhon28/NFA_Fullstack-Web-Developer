@@ -1,108 +1,89 @@
-import Contact from './components/Contact';
-import Team from './components/Team';
-import myFoto from './assets/dzaky.jpeg';
+import Team from "./components/Team";
+import Contact from "./components/Contact";
 
-function App() {
+export default function App() {
   return (
-    <>
-      {/* Navbar / Header */}
-      <div className="container">
-        <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <div className="col-md-3 mb-2 mb-md-0">
-            <a href="#home" className="d-inline-flex align-items-center link-body-emphasis text-decoration-none">
-              <i className="bi bi-code-slash fs-2 text-primary"></i>
-              <span className="ms-2 fs-4 fw-bold">Dzaky.dev</span>
-            </a>
+    <div>
+      {/* 1. NAVBAR */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div className="container">
+          <a className="navbar-brand fw-bold fs-4" href="#home">
+            📚 Dzaky Bookstore
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto fw-semibold">
+              <li className="nav-item">
+                <a className="nav-link active" href="#home">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#team">Team</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </nav>
 
-          <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 fw-semibold">
-            <li>
-              <a href="#home" className="nav-link px-2 link-secondary">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#team" className="nav-link px-2 link-dark">
-                Team
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="nav-link px-2 link-dark">
-                Contact
-              </a>
-            </li>
-          </ul>
-
-          <div className="col-md-3 text-end">
-            <button type="button" className="btn btn-outline-primary me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-primary">
-              Register
-            </button>
-          </div>
-        </header>
-      </div>
-
-      {/* Hero Section (Home) */}
-      <div id="home" className="container my-5">
-        <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg bg-light">
-          <div className="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <span className="badge bg-primary text-white mb-2 px-3 py-2 fw-bold">PORTFOLIO PERSONAL</span>
-            <h1 className="display-4 fw-bold lh-1 text-body-emphasis">
-              Halo, Saya Ahmad Dzaky Romadhon! 👋
-            </h1>
-            <p className="lead text-muted mt-3">
-              Saya seorang Web Developer & Mahasiswa yang berfokus pada pengembangan aplikasi web modern menggunakan React JS dan Bootstrap.
-            </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3 mt-4">
-              <a href="#team" className="btn btn-primary btn-lg px-4 me-md-2 fw-bold">
-                Lihat Tim
-              </a>
-              <a href="#contact" className="btn btn-outline-secondary btn-lg px-4">
-                Hubungi Saya
-              </a>
+      {/* 2. HERO SECTION */}
+      <section id="home" className="py-5 bg-light text-dark align-items-center d-flex min-vh-100">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-7">
+              <span className="badge bg-primary mb-2 px-3 py-2 fs-6">
+                📚 Toko Buku Online Resmi
+              </span>
+              <h1 className="display-4 fw-bold lh-1 mb-3">
+                Selamat Datang di Dzaky Bookstore
+              </h1>
+              <p className="lead text-secondary">
+                Temukan koleksi buku terlengkap mulai dari novel, pemrograman, bisnis, hingga pengembangan diri. Dapatkan penawaran harga terbaik dan pengiriman cepat!
+              </p>
+              <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-0">
+                <a href="#team" className="btn btn-primary btn-lg px-4 me-md-2 fw-semibold">
+                  Tim Pengelola
+                </a>
+                <a href="#contact" className="btn btn-outline-secondary btn-lg px-4 fw-semibold">
+                  Hubungi Toko
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden text-center">
-            <img
-              className="rounded-3 img-fluid shadow-lg mb-4"
-              src={myFoto}
-              alt="Ahmad Dzaky Romadhon"
+            <div className="col-lg-5 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=600&auto=format&fit=crop"
+                className="img-fluid rounded-3 shadow-lg"
+                alt="Dzaky Bookstore Hero"
+                style={{ maxHeight: "400px", objectFit: "cover" }}
               />
             </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* CALL COMPONENT TEAM & CONTACT HERE */}
+      {/* 3. KOMPONEN TEAM & CONTACT */}
       <Team />
       <Contact />
 
-      {/* Footer */}
-      <div className="container">
-        <footer className="py-3 my-4 border-top">
-          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-            <li className="nav-item">
-              <a href="#home" className="nav-link px-2 text-body-secondary">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#team" className="nav-link px-2 text-body-secondary">
-                Team
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link px-2 text-body-secondary">
-                Contact
-              </a>
-            </li>
-          </ul>
-          <p className="text-center text-body-secondary">&copy; 2026 Ahmad Dzaky Romadhon</p>
-        </footer>
-      </div>
-    </>
+      {/* 4. FOOTER */}
+      <footer className="bg-dark text-white py-4 mt-5 border-top border-secondary">
+        <div className="container text-center">
+          <p className="mb-1 fw-semibold">
+            &copy; {new Date().getFullYear()} Dzaky Bookstore. All Rights Reserved.
+          </p>
+          <small className="text-muted">
+            Dibuat oleh Ahmad Dzaky Romadhon — Tugas React JS
+          </small>
+        </div>
+      </footer>
+    </div>
   );
 }
-
-export default App;

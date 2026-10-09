@@ -1,49 +1,46 @@
-import myFoto from '../assets/dzaky.jpeg';
-
 export default function Team() {
   const teamMembers = [
     {
       id: 1,
       name: "Ahmad Dzaky Romadhon",
-      role: "Frontend Developer & UI Specialist",
-      desc: "Fokus pada pengembangan antarmuka web modern yang responsif dan interaktif menggunakan React JS dan Bootstrap.",
-      badge: "Core Member",
+      role: "Founder & Store Manager",
+      desc: "Mengelola operasional toko buku, pemilihan katalog buku terbaik, serta memastikan pelayanan pelanggan berjalan maksimal.",
+      badge: "Owner",
       badgeColor: "bg-primary",
-      // 2. Masukkan variabel import tadi ke sini (tanpa tanda petik)
-      image: myFoto 
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop"
     },
     {
       id: 2,
-      name: "UI/UX Design Team",
-      role: "Visual & Interface Designer",
-      desc: "Merancang wireframe, mockup, dan sistem tata letak visual agar pengalaman pengguna menjadi lebih efisien.",
-      badge: "Design",
+      name: "Siti Rahma",
+      role: "Book Curator & Content Specialist",
+      desc: "Bertanggung jawab memilah buku-buku best seller, menulis ulasan singkat, dan merekomendasikan buku bacaan terbaik.",
+      badge: "Curator",
       badgeColor: "bg-success",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=500&auto=format&fit=crop"
     },
     {
       id: 3,
-      name: "Backend & Git Collaboration",
-      role: "Data Integration & Version Control",
-      desc: "Mengelola integrasi API, alur data aplikasi, serta manajemen versi kode menggunakan Git dan GitHub.",
-      badge: "Support",
+      name: "Budi Santoso",
+      role: "Inventory & Logistics Lead",
+      desc: "Memastikan ketersediaan stok buku fisik, pengemasan rapi dan aman, serta pengiriman tepat waktu ke seluruh Indonesia.",
+      badge: "Logistics",
       badgeColor: "bg-dark",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop"
     }
   ];
 
   return (
     <section id="team" className="py-5 bg-body-tertiary">
       <div className="container">
-        {/* Section Header Template Bootstrap */}
+        {/* Section Header */}
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-6">Tim & Keahlian Saya</h2>
+          <h2 className="fw-bold display-6">Tim Pengelola Bookstore</h2>
           <p className="text-body-secondary lead">
-            Kolaborasi peran dan bidang keahlian utama Ahmad Dzaky Romadhon dalam membangun proyek web.
+            Orang-orang di balik layar yang siap melayani kebutuhan bacaan dan literasi Anda.
           </p>
         </div>
 
-        {/* Card Grid Template Bootstrap */}
+        {/* Card Grid */}
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
           {teamMembers.map((member) => (
             <div key={member.id} className="col">
@@ -52,7 +49,7 @@ export default function Team() {
                   src={member.image}
                   className="card-img-top"
                   alt={member.name}
-                  style={{ height: "220px", objectFit: "cover" }}
+                  style={{ height: "230px", objectFit: "cover" }}
                 />
                 <div className="card-body">
                   <span className={`badge ${member.badgeColor} mb-2`}>
@@ -64,7 +61,7 @@ export default function Team() {
                 </div>
                 <div className="card-footer bg-transparent border-0 pb-3">
                   <button className="btn btn-sm btn-outline-primary w-100 fw-semibold">
-                    Detail Profil
+                    Hubungi Pengelola
                   </button>
                 </div>
               </div>
