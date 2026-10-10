@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Glassmorphism & Modern Card */
+.custom-card {
+  border: none;
+  border-radius: 16px;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Gradient Hero Background */
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: 24px;
+}
+
+/* Gradient Text Effect */
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Button Styling */
+.btn-gradient {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  color: white;
+  transform: scale(1.02);
+}
+
+/* Badge Price Tag */
+.price-badge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
